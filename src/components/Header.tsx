@@ -1,4 +1,7 @@
-import { Link } from 'react-router-dom';
+import './hero.css';
+
+import classnames from 'classnames';
+import { Link, useLocation } from 'react-router-dom';
 
 const navigationLinks = [
   {
@@ -16,21 +19,41 @@ const navigationLinks = [
 ];
 
 export default function Header() {
+  const location = useLocation();
+
   return (
-    <nav className="h-16 w-full shadow flex justify-between items-center px-12 font-sans">
+    <nav className="sticky top-0 h-16 w-full flex justify-between shadow items-center px-12 font-sans border-b-2  border-gray-600 z-50 bg-white">
       <div className="font-bold text-xl">
         <Link to="/">SwipeLondon</Link>
       </div>
-      <div>
+      <div className="flex">
         <ul className="flex items-center gap-8 text-gray-700 text-lg">
           {navigationLinks.map((link) => {
             return (
-              <Link key={link.title} to={link.navigation}>
+              <Link
+                key={link.title}
+                to={link.navigation}
+                className={classnames(
+                  'p-2 rounded-lg  hover:bg-pastel-yellow-700 transition duration-200 font-bold',
+                  {
+                    'rounded-none hover:rounded-lg hover:border-none border-b-4 border-pastel-yellow-700':
+                      location.pathname === link.navigation,
+                  },
+                )}
+              >
                 {link.title}
               </Link>
             );
           })}
         </ul>
+        <div className="ml-4 pl-4 border-l-2 border-gray-600 flex items-center justify-center">
+          <Link
+            to="/"
+            className="p-2 rounded-lg  hover:bg-pastel-yellow-700 transition duration-200 font-bold"
+          >
+            Log In
+          </Link>
+        </div>
       </div>
     </nav>
   );

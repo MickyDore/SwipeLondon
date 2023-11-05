@@ -8,9 +8,9 @@ import Home from '/src/pages/Home';
 
 function App() {
   return (
-    <div className="w-full min-h-[100dvh] bg-pastel-pink-200">
+    <div className="flex flex-col w-full min-h-[100dvh] h-[100dvh] max-h-[100dvh]">
       <Header />
-      <main className="flex-1 max-h-full p-8 px-12">
+      <main className="flex-1 max-h-full overflow-y-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />

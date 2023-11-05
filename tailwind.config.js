@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Lexend"', ...defaultTheme.fontFamily.sans],
+        sans: ["'DM Sans'", '"Lexend"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'pastel-pink': {

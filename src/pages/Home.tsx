@@ -1,5 +1,13 @@
 import React from 'react';
 
+import About from '/src/components/About';
+import Hero from '/src/components/Hero';
+
 export default function Home() {
-  return <>This is the home page</>;
+  return (
+    <>
+      <Hero />
+      <About />
+    </>
+  );
 }
