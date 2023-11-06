@@ -23,26 +23,27 @@ export default function Header() {
 
   return (
     <nav className="sticky top-0 h-16 w-full flex justify-between shadow items-center px-12 font-sans border-b-2  border-gray-600 z-50 bg-white">
-      <div className="font-bold text-xl">
+      <div className="font-bold text-xl text-gray-700">
         <Link to="/">SwipeLondon</Link>
       </div>
       <div className="flex">
         <ul className="flex items-center gap-8 text-gray-700 text-lg">
           {navigationLinks.map((link) => {
             return (
-              <Link
-                key={link.title}
-                to={link.navigation}
-                className={classnames(
-                  'p-2 rounded-lg  hover:bg-pastel-yellow-700 transition duration-200 font-bold',
-                  {
-                    'rounded-none hover:rounded-lg hover:border-none border-b-4 border-pastel-yellow-700':
-                      location.pathname === link.navigation,
-                  },
-                )}
-              >
-                {link.title}
-              </Link>
+              <li key={link.title}>
+                <Link
+                  to={link.navigation}
+                  className={classnames(
+                    'p-2   hover:bg-pastel-yellow-700 transition duration-200 font-bold',
+                    {
+                      'rounded-none -pb-4 border-b-4  border-pastel-yellow-700':
+                        location.pathname === link.navigation,
+                    },
+                  )}
+                >
+                  {link.title}
+                </Link>
+              </li>
             );
           })}
         </ul>
