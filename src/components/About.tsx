@@ -10,8 +10,8 @@ export default function About() {
 
   return (
     <div className="w-full h-auto p-12 px-40 bg-gradient-to-br from-pastel-blue-200 to-pastel-blue-400 flex flex-col font-sans">
-      <div className="flex max-h-60 my-8">
-        <div className="w-80">
+      <div className="flex h-auto gap-12 my-8 px-12">
+        <div className="max-h-60 aspect-square">
           <img
             src={BloomSVG}
             alt="A person hugging a phone screen."
@@ -33,7 +33,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex max-h-60 my-8">
+      <div className="flex h-auto gap-4 my-8 px-12">
         <div className="flex-1">
           <h3 className="font-bold text-5xl w-fit text-right" style={underline}>
             #2 Like your favourite date ideas
@@ -47,7 +47,7 @@ export default function About() {
             dolores vitae adipisci, doloribus maxime mollitia.
           </p>
         </div>
-        <div className="w-80">
+        <div className="max-h-60 aspect-square">
           <img
             src={SearchSVG}
             alt="A person hugging a phone screen."
@@ -56,8 +56,8 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex max-h-60 my-8">
-        <div className="w-80">
+      <div className="flex h-auto gap-12 my-8 px-12">
+        <div className="max-h-60 aspect-square">
           <img
             src={LoveSVG}
             alt="A person hugging a phone screen."

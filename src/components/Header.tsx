@@ -30,14 +30,13 @@ export default function Header() {
         <ul className="flex items-center gap-8 text-gray-700 text-lg">
           {navigationLinks.map((link) => {
             return (
-              <li key={link.title}>
+              <li key={link.title} className="relative">
                 <Link
                   to={link.navigation}
                   className={classnames(
-                    'p-2   hover:bg-pastel-yellow-700 transition duration-200 font-bold',
+                    'p-2 hover:bg-pastel-yellow-700 transition duration-200 font-bold',
                     {
-                      'rounded-none -pb-4 border-b-4  border-pastel-yellow-700':
-                        location.pathname === link.navigation,
+                      ActiveTab: location.pathname === link.navigation,
                     },
                   )}
                 >
@@ -50,7 +49,7 @@ export default function Header() {
         <div className="ml-4 pl-4 border-l-2 border-gray-600 flex items-center justify-center">
           <Link
             to="/"
-            className="p-2 rounded-lg  hover:bg-pastel-yellow-700 transition duration-200 font-bold"
+            className="p-2 hover:bg-pastel-yellow-700 transition duration-200 font-bold"
           >
             Log In
           </Link>
