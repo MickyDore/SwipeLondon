@@ -1,3 +1,5 @@
+import './hero.css';
+
 import SwipeSVG from '/src/assets/images/swipe.svg';
 
 export default function Hero() {
@@ -12,10 +14,10 @@ export default function Hero() {
         <div className="flex-1 min-h-full flex flex-col justify-center items-center">
           <p className="text-3xl text-center mb-2">Never again say the words</p>
           <p className="font-bold text-7xl text-center mx-auto">
-            What do you wanna do tonight?
+            <span className="ThickUnderline">What do you wanna do tonight?</span>
           </p>
           <div className="mt-20 flex justify-center">
-            <button type="button" className="rounded-md bg-black mr-8">
+            <button type="button" className="rounded-md bg-black">
               <span className="font-bold block -translate-x-1 -translate-y-1 rounded-md border-2 border-black bg-pastel-yellow-400 hover:bg-pastel-yellow-700 p-4 text-2xl transition-all  active:translate-x-0 active:translate-y-0">
                 Find date ideas now
               </span>

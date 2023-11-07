@@ -44,6 +44,13 @@ module.exports = {
           800: '#E3A018',
           DEFAULT: '#F4D738',
         },
+        'pastel-red': {
+          200: '#F8D6B3',
+          400: '#FFA07A',
+          700: '#FF7A5C',
+          800: '#FF6B6B',
+          DEFAULT: '#FF7A5C',
+        },
       },
     },
   },
