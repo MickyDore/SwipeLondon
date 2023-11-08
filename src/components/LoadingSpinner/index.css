@@ -1,0 +1,49 @@
+.spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation: rotate 2s linear infinite;
+}
+.spinner:before,
+.spinner:after {
+  content: '';
+  flex: 1;
+  background: #f4d738;
+  animation: mvx 0.5s infinite linear alternate;
+}
+.spinner:before {
+  background: #ff7a5c;
+  animation-name: mvrx;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mvx {
+  0%,
+  40% {
+    transform: translateX(0px);
+  }
+  20%,
+  60% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+@keyframes mvrx {
+  0%,
+  40% {
+    transform: translateX(0px);
+  }
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(-15px);
+  }
+}
